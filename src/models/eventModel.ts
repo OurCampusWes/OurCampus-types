@@ -35,7 +35,7 @@ export class EventModel implements EventType {
   }
 }
 
-export class EventModelCollection {
+export class EventCollection {
   events: { [key: string]: EventModel };
 
   constructor({ events }: { events: { [key: string]: EventModel } }) {

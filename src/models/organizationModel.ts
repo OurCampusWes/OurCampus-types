@@ -31,7 +31,7 @@ export class OrganizationModel implements OrganizationType {
   }
 }
 
-export class OrganizationModelCollection {
+export class OrganizationCollection {
   organizations: { [key: string]: OrganizationModel };
 
   constructor({

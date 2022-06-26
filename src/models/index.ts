@@ -1,4 +1,9 @@
-import { CourseModel } from './courseModel';
-import { DepartmentModel } from './departmentModel';
-
-export { CourseModel, DepartmentModel };
+export { CourseModel, CourseCollection } from './courseModel';
+export { DepartmentModel, DepartmentCollection } from './departmentModel';
+export { DishModel, DishCollection } from './dishModel';
+export { EventModel, EventCollection } from './eventModel';
+export { MenuModel, MenuCollection } from './menuModel';
+export { OrganizationModel, OrganizationCollection } from './organizationModel';
+export { ProfessorModel, ProfessorCollection } from './professorModel';
+export { ReviewModel, ReviewCollection } from './reviewModel';
+export { UserModel, UserCollection } from './userModel';

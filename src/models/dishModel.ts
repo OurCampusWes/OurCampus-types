@@ -23,7 +23,7 @@ export class DishModel implements DishType {
   }
 }
 
-export class DishModelCollection {
+export class DishCollection {
   dishs: { [key: string]: DishModel };
 
   constructor({ dishs }: { dishs: { [key: string]: DishModel } }) {

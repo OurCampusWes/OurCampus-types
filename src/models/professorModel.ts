@@ -20,7 +20,7 @@ export class ProfessorModel implements ProfessorType {
   }
 }
 
-export class ProfessorModelCollection {
+export class ProfessorCollection {
   professors: { [key: string]: ProfessorModel };
 
   constructor({

@@ -1,44 +1,29 @@
-import {
-  CollectionReference,
-  DocumentReference,
-  Firestore,
-  Query,
-  collection,
-} from "firebase/firestore";
+import { CollectionReference, Firestore, collection } from 'firebase/firestore';
 
-export default class DatabaseService {
-  db: Firestore | null = null;
+export class DatabaseService {
+  userCollection: CollectionReference;
+  eventCollection: CollectionReference;
+  orgEventCollection: CollectionReference;
+  directoryCollection: CollectionReference;
+  departmentCollection: CollectionReference;
+  configCollection: CollectionReference;
+  organizationCollection: CollectionReference;
+  professorCollection: CollectionReference;
+  restaurantCollection: CollectionReference;
+  dishCollection: CollectionReference;
+  courseCollection: CollectionReference;
 
-  static set db(database: Firestore) {
-    this.db = database;
+  constructor(database: Firestore) {
+    this.userCollection = collection(database, 'users');
+    this.eventCollection = collection(database, 'events');
+    this.orgEventCollection = collection(database, 'org-events');
+    this.directoryCollection = collection(database, 'directory');
+    this.departmentCollection = collection(database, 'departments');
+    this.configCollection = collection(database, 'config');
+    this.organizationCollection = collection(database, 'organizations');
+    this.professorCollection = collection(database, 'professors');
+    this.restaurantCollection = collection(database, 'menus');
+    this.dishCollection = collection(database, 'dishes');
+    this.courseCollection = collection(database, 'courses');
   }
-
-  static userCollection: CollectionReference = collection(this.db, "users");
-  static eventCollection: CollectionReference = collection(this.db, "events");
-  static orgEventCollection: CollectionReference = collection(
-    this.db,
-    "org-events"
-  );
-  static directoryCollection: CollectionReference = collection(
-    this.db,
-    "directory"
-  );
-  static departmentCollection: CollectionReference = collection(
-    this.db,
-    "departments"
-  );
-  static configCollection: CollectionReference = collection(this.db, "config");
-  static organizationCollection: CollectionReference = collection(
-    this.db,
-    "organizations"
-  );
-  static professorCollection: CollectionReference = collection(
-    this.db,
-    "professors"
-  );
-  static restaurantCollection: CollectionReference = collection(
-    this.db,
-    "menus"
-  );
-  static dishCollection: CollectionReference = collection(this.db, "dishes");
 }

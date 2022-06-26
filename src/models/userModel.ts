@@ -1,4 +1,11 @@
-import { DocumentData, DocumentReference, Timestamp } from 'firebase/firestore';
+import {
+  doc,
+  DocumentData,
+  DocumentReference,
+  DocumentSnapshot,
+  Firestore,
+  getDoc,
+} from 'firebase/firestore';
 import { NotificationsType, UserType } from '../types';
 
 export class UserModel implements UserType {
@@ -25,6 +32,23 @@ export class UserModel implements UserType {
     this.displayName = userProps.displayName;
     this.notifications = userProps.notifications;
   }
+
+  static _fromSnapshot(doc: DocumentSnapshot): UserModel {
+    const data = doc.data() as UserType;
+    return new UserModel(data);
+  }
+
+  static async getUser({
+    db,
+    uid,
+  }: {
+    db: Firestore;
+    uid: string;
+  }): Promise<UserModel> {
+    const docRef = doc(db, 'users', uid);
+    const docSnap = await getDoc(docRef);
+    return this._fromSnapshot(docSnap);
+  }
 }
 
 export class TruncatedUserModel {
@@ -43,7 +67,7 @@ export class TruncatedUserModel {
   }
 }
 
-export class UserModelCollection {
+export class UserCollection {
   users: { [key: string]: TruncatedUserModel };
 
   constructor({ users }: { users: { [key: string]: TruncatedUserModel } }) {

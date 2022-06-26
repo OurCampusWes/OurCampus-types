@@ -27,7 +27,7 @@ export class ReviewModel implements ReviewType {
   }
 }
 
-export class ReviewModelCollection {
+export class ReviewCollection {
   reviews: { [key: string]: ReviewModel };
 
   constructor({ reviews }: { reviews: { [key: string]: ReviewModel } }) {

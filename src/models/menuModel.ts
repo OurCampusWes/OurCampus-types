@@ -22,7 +22,7 @@ export class MenuModel implements MenuType {
   }
 }
 
-export class MenuModelCollection {
+export class MenuCollection {
   menus: { [key: string]: MenuModel };
 
   constructor({ menus }: { menus: { [key: string]: MenuModel } }) {
