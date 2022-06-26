@@ -29,4 +29,4 @@ export const selectCurrentUser = (state) => state.user.currUser;
 export const selectUserCollection = (state) => state.user.userCollection;
 
 export * from './actions';
-export default UserSlice.reducer;
+export const UserReducer = UserSlice.reducer;
