@@ -1,5 +1,3 @@
-import { DocumentReference, Timestamp } from 'firebase/firestore';
-
 export type DepartmentType = {
   displayName: string;
   id: string;
@@ -26,25 +24,25 @@ export type DishType = {
   isVegan: boolean;
   uid: number;
   title: string;
-  lastSeen: Timestamp;
+  lastSeen: string;
   description: string;
 };
 
 export type EventType = {
   imageURL: string;
   invited: string[];
-  endDateTime: Timestamp;
+  endDateTime: string;
   joined: null[];
   title: string;
   location: string;
   description: string;
-  startDateTime: Timestamp;
+  startDateTime: string;
   public: boolean;
   category: number;
-  dateTimePosted: Timestamp;
+  dateTimePosted: string;
   author: string;
   flagged: null[];
-  dateTimeEdited: Timestamp;
+  dateTimeEdited: string;
 };
 
 export type MenuType = {
@@ -60,7 +58,7 @@ export type MenuType = {
 
 export type OrganizationType = {
   contact: string;
-  dateTimePosted: Timestamp;
+  dateTimePosted: string;
   author: string;
   description: string;
   link: string;
@@ -70,15 +68,15 @@ export type OrganizationType = {
   subscribers: string[];
   media: string[];
   imageURL: string;
-  dateTimeEdited: Timestamp;
+  dateTimeEdited: string;
 };
 
-export interface ReviewType {
+export type ReviewType = {
   quality: number;
   grade: string;
   course: string;
   comment: string;
-  timestamp: Timestamp;
+  string: string;
   recommended: boolean;
   difficulty: number;
   likes: string[];
@@ -102,18 +100,25 @@ export type UserType = {
   email: string;
   os: string;
   group: string;
-  directory: DocumentReference;
+  directory: string;
   imageURL: string;
   blocked: boolean;
   displayName: string;
-  notifications: NotificationsType;
+};
+
+export type TruncatedUserType = {
+  incognito: boolean;
+  email: string;
+  group: string;
+  imageURL: string;
+  displayName: string;
 };
 
 export type NotificationsType = {
   data: NotificationDataType;
   viewed: boolean;
   sender: string;
-  timestamp: Timestamp;
+  string: string;
   type: number;
 };
 
