@@ -56,6 +56,39 @@
 </p>
 </details>
 
+<details><summary>Hour</summary>
+<p>
+
+```
+  isBreak: boolean
+  monday?: HourData
+  tuesday?: HourData
+  wednesday?: HourData
+  thursday?: HourData
+  friday?: HourData
+  satutday?: HourData
+  sunday?: HourData
+  weekday: HourData
+  weekend: HourData
+```
+
+</p>
+</details>
+
+<details><summary>HourData</summary>
+<p>
+
+```
+  allDay: number | undefined | null;
+  breakfast: number | undefined | null;
+  brunch: number | undefined | null;
+  lunch: number | undefined | null;
+  dinner: number | undefined | null;
+```
+
+</p>
+</details>
+
 <details><summary>Event</summary>
 <p>
 
@@ -63,7 +96,7 @@
   imageURL: string
   invited: string[]
   endDateTime: string
-  joined: null[]
+  joined: string[]
   title: string
   location: string
   description: string
@@ -72,7 +105,7 @@
   category: number
   dateTimePosted: string
   author: string
-  flagged: null[]
+  flagged: string[]
   dateTimeEdited: string
 ```
 
@@ -84,13 +117,25 @@
 
 ```
   displayName: string
-  fixedMenu: unknown[]
+  fixedMenu: FixedDish[]
   snippet: string
   shortDisplayName: string
   imageURL: string
   menu: Dish[]
   fallbackURL: string
-  hours: unknown
+  hours: Hours
+```
+
+</p>
+</details>
+
+<details><summary>Fixed Dish</summary>
+<p>
+
+```
+ imageUrls: string[]
+  snippet: string 
+  title: string
 ```
 
 </p>
