@@ -6,7 +6,7 @@ export type Menu = {
   imageURL: string;
   menu: Dish[];
   fallbackURL: string;
-  hours: unknown;
+  hours: Hours;
 };
 
 export type FixedDish = {
