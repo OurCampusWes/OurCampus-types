@@ -210,6 +210,8 @@
   imageURL: string
   blocked: boolean
   displayName: string
+  menuSubscriptions: string[]
+  orgSubscriptions: string[]
 ```
 
 </p>

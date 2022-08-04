@@ -8,6 +8,8 @@ export type User = {
   imageURL: string;
   blocked: boolean;
   displayName: string;
+  menuSubscriptions: string[];
+  orgSubscriptions: string[];
 };
 
 export type TruncatedUser = {
