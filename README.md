@@ -211,7 +211,7 @@
   blocked: boolean
   displayName: string
   menuSubscriptions: string[]
-  orgSubscriptions: string[]
+  orgSubscriptions: {id:string, type:string}[]
 ```
 
 </p>

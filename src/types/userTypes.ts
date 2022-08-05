@@ -9,7 +9,7 @@ export type User = {
   blocked: boolean;
   displayName: string;
   menuSubscriptions: string[];
-  orgSubscriptions: string[];
+  orgSubscriptions: {id:string, type:string}[];
 };
 
 export type TruncatedUser = {
