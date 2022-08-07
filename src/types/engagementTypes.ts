@@ -12,6 +12,7 @@ export type Event = {
   dateTimePosted: string;
   author: string;
   flagged: string[];
+  label: 'c' | 'u' | 's',
   dateTimeEdited: string;
 };
 
