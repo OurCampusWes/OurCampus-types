@@ -4,7 +4,7 @@ export type Menu = {
   snippet: string;
   shortDisplayName: string;
   imageURL: string;
-  menu: Dish[];
+  menu: MenuDish[];
   fallbackURL: string;
   hours: Hours;
 };
@@ -13,6 +13,20 @@ export type FixedDish = {
   imageUrls: string[];
   snippet: string;
   title: string;
+};
+
+export type MenuDish = {
+  subscribers: string[];
+  isVegetarian: boolean;
+  isGlutenFree: boolean;
+  isVegan: boolean;
+  uid: number;
+  title: string;
+  lastSeen: string;
+  description: string;
+  station:string,
+	timeofDay: string,
+	weekDay: string
 };
 
 export type Dish = {
