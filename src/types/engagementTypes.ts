@@ -14,6 +14,7 @@ export type Event = {
   flagged: string[];
   label: 'c' | 'u' | 's',
   dateTimeEdited: string;
+  id: string;
 };
 
 export type Organization = {

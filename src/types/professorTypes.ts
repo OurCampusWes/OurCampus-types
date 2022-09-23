@@ -28,6 +28,7 @@ export type Review = {
   likes: string[];
   author: string;
   tags: number[];
+  id:string;
 };
 
 export type Professor = {
@@ -38,4 +39,5 @@ export type Professor = {
   averageQuality: number;
   totalReviews: number;
   reviews: { [key: string]: Review };
+  id: string;
 };

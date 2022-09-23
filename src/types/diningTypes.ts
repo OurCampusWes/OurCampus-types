@@ -26,7 +26,8 @@ export type MenuDish = {
   description: string;
   station:string,
   timeOfDay: string,
-  weekDay: string
+  weekDay: string,
+  id: string
 };
 
 export type Dish = {
@@ -38,6 +39,7 @@ export type Dish = {
   title: string;
   lastSeen: string;
   description: string;
+  id: string;
 };
 
 export type Hours = {

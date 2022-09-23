@@ -10,6 +10,7 @@ export type User = {
   displayName: string;
   menuSubscriptions: string[];
   orgSubscriptions: {id:string, type:string}[];
+  uid: string
 };
 
 export type TruncatedUser = {
