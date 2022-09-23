@@ -1,5 +1,10 @@
 # OurCampus-Types
 
+To install, run: 
+```
+npm install @ourcampuswes/types
+```
+
 ## Types
 <br/>
 
