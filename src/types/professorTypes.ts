@@ -28,7 +28,8 @@ export type Review = {
   likes: string[];
   author: string;
   tags: number[];
-  id:string;
+  id: string;
+  professor: string;
 };
 
 export type Professor = {
