@@ -22,7 +22,7 @@ export type Review = {
   grade: string;
   course: string;
   comment: string;
-  string: string;
+  timeStamp: string;
   recommended: boolean;
   difficulty: number;
   likes: string[];
