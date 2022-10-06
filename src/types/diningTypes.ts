@@ -54,9 +54,14 @@ export type Hours = {
 };
 
 export type HourData = {
-  allDay: number | undefined | null;
-  breakfast: number | undefined | null;
-  brunch: number | undefined | null;
-  lunch: number | undefined | null;
-  dinner: number | undefined | null;
+  allDay?: OpenClose;
+  breakfast?: OpenClose;
+  brunch?: OpenClose;
+  lunch?: OpenClose;
+  dinner?: OpenClose;
 };
+
+export type OpenClose = {
+  open: string;
+  close: string;
+}
