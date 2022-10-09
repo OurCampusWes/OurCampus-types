@@ -47,7 +47,7 @@ export type Hours = {
   wednesday?: HourData;
   thursday?: HourData;
   friday?: HourData;
-  satutday?: HourData;
+  saturday?: HourData;
   sunday?: HourData;
   weekday: HourData;
   weekend: HourData;
