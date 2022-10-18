@@ -30,7 +30,7 @@ export type Review = {
   tags: number[];
   id: string;
   professor: string;
-  blockedUsers: [];
+  blockedUsers: string[];
 };
 
 export type Professor = {
