@@ -15,6 +15,7 @@ export type Event = {
   label: 'c' | 'u' | 's',
   dateTimeEdited: string;
   id: string;
+  blockedUsers: string[];
 };
 
 export type Organization = {
