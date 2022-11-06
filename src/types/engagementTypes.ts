@@ -11,10 +11,10 @@ export type Event = {
   startDateTime: string | Timestamp;
   public: boolean;
   category: number;
-  dateTimePosted:  string | Timestamp;
+  dateTimePosted: string | Timestamp;
   author: string;
   flagged: string[];
-  label: 'c' | 'u' | 's',
+  label: 'c' | 'u' | 's';
   dateTimeEdited: string | Timestamp;
   id: string;
   blockedUsers: string[];
@@ -38,16 +38,17 @@ export type Organization = {
 export type Advertisment = {
   appearance: 'dark' | 'light';
   description: string;
+  displayName: string;
   id: string;
   imageUrl: string;
   snippet: string;
   gradientStartColor: string;
   gradientEndColor: string;
-  links: Link[]
+  links: Link[];
 };
 
 export type Link = {
   link: string;
   logoUrl: string;
-  displayName: string
+  displayName: string;
 };
