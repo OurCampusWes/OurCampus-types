@@ -1,3 +1,5 @@
+import { Timestamp } from '@firebase/firestore-types';
+
 export type Department = {
   displayName: string;
   id: string;
@@ -15,6 +17,7 @@ export type Course = {
   displayName: string;
   link: string;
   sections: { [key: string]: Section };
+  dateTimeEdited: string | Timestamp;
 };
 
 export type Review = {
@@ -22,7 +25,8 @@ export type Review = {
   grade: string;
   course: string;
   comment: string;
-  timeStamp: string;
+  timeStamp: string | Timestamp;
+  dateTimeEdited: string | Timestamp;
   recommended: boolean;
   difficulty: number;
   likes: string[];
@@ -42,4 +46,5 @@ export type Professor = {
   totalReviews: number;
   reviews: { [key: string]: Review };
   id: string;
+  dateTimeEdited: string | Timestamp;
 };

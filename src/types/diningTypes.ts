@@ -1,3 +1,5 @@
+import { Timestamp } from '@firebase/firestore-types';
+
 export type Menu = {
   displayName: string;
   fixedMenu: FixedDish[];
@@ -7,6 +9,7 @@ export type Menu = {
   menu: MenuDish[];
   fallbackURL: string;
   hours: Hours;
+  dateTimeEdited: string | Timestamp;
 };
 
 export type FixedDish = {
@@ -22,7 +25,7 @@ export type MenuDish = {
   isVegan: boolean;
   uid: number;
   title: string;
-  lastSeen: string;
+  lastSeen: string | Timestamp;
   description: string;
   station:string,
   timeOfDay: string,
@@ -36,7 +39,7 @@ export type Dish = {
   isVegan: boolean;
   uid: number;
   title: string;
-  lastSeen: string;
+  lastSeen: string | Timestamp;
   description: string;
 };
 
@@ -62,6 +65,6 @@ export type HourData = {
 };
 
 export type OpenClose = {
-  open: string;
-  close: string;
-}
+  open: string | Timestamp;
+  close: string | Timestamp;
+};

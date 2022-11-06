@@ -1,15 +1,17 @@
+import { DocumentReference } from '@firebase/firestore-types';
+
 export type User = {
   token: string;
   incognito: boolean;
   email: string;
-  os: string;
+  os: 'IOS' | 'ANDROID';
   group: string;
-  directory: string;
+  directory: string | DocumentReference;
   imageURL: string;
   blocked: boolean;
   displayName: string;
   menuSubscriptions: string[];
-  orgSubscriptions: {id:string, type:string}[];
+  orgSubscriptions: { id: string, type: 'c' | 's' }[];
   uid: string
 };
 
