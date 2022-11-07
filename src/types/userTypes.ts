@@ -1,4 +1,5 @@
 import { DocumentReference } from '@firebase/firestore-types';
+import { Override } from './utilTypes';
 
 export type User = {
   token: string;
@@ -6,7 +7,7 @@ export type User = {
   email: string;
   os: 'IOS' | 'ANDROID';
   group: string;
-  directory: string | DocumentReference;
+  directory: string;
   imageURL: string;
   blocked: boolean;
   displayName: string;
@@ -15,24 +16,14 @@ export type User = {
   uid: string
 };
 
+export type UserDeserialized = Override<User, {
+  directory: DocumentReference;
+}>;
+
 export type TruncatedUser = {
   incognito: boolean;
   email: string;
   group: string;
   imageURL: string;
   displayName: string;
-};
-
-export type Notifications = {
-  data: NotificationData;
-  viewed: boolean;
-  sender: string;
-  string: string;
-  type: number;
-};
-
-export type NotificationData = {
-  body: string;
-  restaurantId: string;
-  title: string;
 };

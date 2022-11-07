@@ -1,4 +1,5 @@
 import { Timestamp } from '@firebase/firestore-types';
+import { Override } from './utilTypes';
 
 export type Department = {
   displayName: string;
@@ -17,16 +18,21 @@ export type Course = {
   displayName: string;
   link: string;
   sections: { [key: string]: Section };
-  dateTimeEdited: string | Timestamp;
+  dateTimeEdited: string ;
 };
+
+export type CourseDeserialized = Override< Course, {
+  timeStamp: Timestamp ;
+  dateTimeEdited: Timestamp ;
+}>;
 
 export type Review = {
   quality: number;
   grade: string;
   course: string;
   comment: string;
-  timeStamp: string | Timestamp;
-  dateTimeEdited: string | Timestamp;
+  timeStamp: string ;
+  dateTimeEdited: string ;
   recommended: boolean;
   difficulty: number;
   likes: string[];
@@ -37,6 +43,11 @@ export type Review = {
   blockedUsers: string[];
 };
 
+export type ReviewDeserialized = Override< Review, {
+  timeStamp: Timestamp ;
+  dateTimeEdited: Timestamp ;
+}>;
+
 export type Professor = {
   displayName: string;
   averageDifficulty: number;
@@ -46,5 +57,9 @@ export type Professor = {
   totalReviews: number;
   reviews: { [key: string]: Review };
   id: string;
-  dateTimeEdited: string | Timestamp;
+  dateTimeEdited: string ;
 };
+
+export type ProfessorDeserialized = Override< Professor, {
+  dateTimeEdited: Timestamp ;
+}>;

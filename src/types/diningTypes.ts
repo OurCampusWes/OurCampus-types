@@ -1,3 +1,4 @@
+import { Override } from './utilTypes';
 import { Timestamp } from '@firebase/firestore-types';
 
 export type Menu = {
@@ -9,8 +10,12 @@ export type Menu = {
   menu: MenuDish[];
   fallbackURL: string;
   hours: Hours;
-  dateTimeEdited: string | Timestamp;
+  dateTimeEdited: string;
 };
+
+export type MenuDeserialized = Override<Menu, {
+  dateTimeEdited: Timestamp;
+}>;
 
 export type FixedDish = {
   imageUrls: string[];
@@ -25,12 +30,16 @@ export type MenuDish = {
   isVegan: boolean;
   uid: number;
   title: string;
-  lastSeen: string | Timestamp;
   description: string;
   station:string,
   timeOfDay: string,
   weekDay: string,
+  lastSeen: string ;
 };
+
+export type MenuDishDeserialized = Override<MenuDish, {
+  lastSeen: Timestamp;
+}>;
 
 export type Dish = {
   subscribers: string[];
@@ -39,9 +48,13 @@ export type Dish = {
   isVegan: boolean;
   uid: number;
   title: string;
-  lastSeen: string | Timestamp;
   description: string;
+  lastSeen: string ;
 };
+
+export type DishDeserialized = Override<Dish, {
+  lastSeen: Timestamp;
+}>;
 
 export type Hours = {
   isBreak: boolean;
@@ -65,6 +78,6 @@ export type HourData = {
 };
 
 export type OpenClose = {
-  open: string | Timestamp;
-  close: string | Timestamp;
+  open: string ;
+  close: string ;
 };

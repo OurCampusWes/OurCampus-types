@@ -1,28 +1,35 @@
+import { Override } from './utilTypes';
 import { Timestamp } from '@firebase/firestore-types';
 
 export type Event = {
   imageURL: string;
   invited: string[];
-  endDateTime: string | Timestamp;
   joined: string[];
   title: string;
   location: string;
   description: string;
-  startDateTime: string | Timestamp;
   public: boolean;
   category: number;
-  dateTimePosted: string | Timestamp;
   author: string;
   flagged: string[];
   label: 'c' | 'u' | 's';
-  dateTimeEdited: string | Timestamp;
   id: string;
   blockedUsers: string[];
+  dateTimePosted: string ;
+  startDateTime: string;
+  endDateTime: string;
+  dateTimeEdited: string ;
 };
+
+export type EventDeserialized = Override<Event, {
+  startDateTime: Timestamp ;
+  endDateTime: Timestamp;
+  dateTimePosted: Timestamp;
+  dateTimeEdited: Timestamp;
+}>;
 
 export type Organization = {
   contact: string;
-  dateTimePosted: string | Timestamp;
   author: string;
   description: string;
   link: string;
@@ -32,8 +39,14 @@ export type Organization = {
   subscribers: string[];
   media: string[];
   imageURL: string;
-  dateTimeEdited: string | Timestamp;
+  dateTimeEdited: string;
+  dateTimePosted: string ;
 };
+
+export type OrganizationDeserialized = Override<Organization, {
+  dateTimeEdited: Timestamp;
+  dateTimePosted: Timestamp ;
+}>;
 
 export type Advertisment = {
   appearance: 'dark' | 'light';
