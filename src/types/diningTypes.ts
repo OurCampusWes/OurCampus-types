@@ -18,7 +18,7 @@ export type MenuDeserialized = Override<Menu, {
 }>;
 
 export type FixedDish = {
-  imageUrls: string[];
+  imageURLS: string[];
   snippet: string;
   title: string;
 };
