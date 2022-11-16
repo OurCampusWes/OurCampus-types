@@ -11,7 +11,7 @@ export type Event = {
   public: boolean;
   category: number;
   author: string;
-  flagged: string[];
+  flagged: boolean;
   label: 'c' | 'u' | 's';
   id: string;
   blockedUsers: string[];

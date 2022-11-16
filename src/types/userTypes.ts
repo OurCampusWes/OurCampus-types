@@ -10,6 +10,7 @@ export type User = {
   directory: string;
   imageURL: string;
   blocked: boolean;
+  blockedUsers: string[];
   displayName: string;
   menuSubscriptions: string[];
   orgSubscriptions: { id: string, type: 'c' | 's' }[];

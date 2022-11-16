@@ -41,6 +41,7 @@ export type Review = {
   id: string;
   professor: string;
   blockedUsers: string[];
+  flagged: boolean
 };
 
 export type ReviewDeserialized = Override< Review, {
