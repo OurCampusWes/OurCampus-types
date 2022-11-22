@@ -48,7 +48,7 @@ export type OrganizationDeserialized = Override<Organization, {
   dateTimePosted: Timestamp ;
 }>;
 
-export type Advertisment = {
+export type Advertisement = {
   appearance: 'dark' | 'light';
   description: string;
   displayName: string;
