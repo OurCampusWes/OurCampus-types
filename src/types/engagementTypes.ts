@@ -29,7 +29,7 @@ export type EventDeserialized = Override<Event, {
 }>;
 
 export type Organization = {
-  contact: string;
+  contact: string[];
   author: string;
   description: string;
   link: string;
