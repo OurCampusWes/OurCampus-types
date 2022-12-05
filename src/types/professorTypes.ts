@@ -22,7 +22,7 @@ export type Course = {
 };
 
 export type CourseDeserialized = Override< Course, {
-  timeStamp: Timestamp ;
+  timestamp: Timestamp ;
   dateTimeEdited: Timestamp ;
 }>;
 
@@ -31,7 +31,7 @@ export type Review = {
   grade: string;
   course: string;
   comment: string;
-  timeStamp: string ;
+  timestamp: string ;
   dateTimeEdited: string ;
   recommended: boolean;
   difficulty: number;
@@ -45,7 +45,7 @@ export type Review = {
 };
 
 export type ReviewDeserialized = Override< Review, {
-  timeStamp: Timestamp ;
+  timestamp: Timestamp ;
   dateTimeEdited: Timestamp ;
 }>;
 
